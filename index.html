@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Gestión - Software Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Módulo de Gestión de Pacientes / Citas</h1>
+
+        <!-- SECCIÓN 1: REGISTRO -->
+        <section class="card">
+            <h2>1. Registrar Usuario / Paciente</h2>
+            <form id="formRegistro">
+                <div class="form-group">
+                    <label for="nombreRegistro">Nombre completo:</label>
+                    <input type="text" id="nombreRegistro" placeholder="Ej: Alejandro Olivero">
+                </div>
+                <div class="form-group">
+                    <label for="correoRegistro">Correo electrónico:</label>
+                    <input type="email" id="correoRegistro" placeholder="correo@ejemplo.com">
+                </div>
+                <div class="form-group">
+                    <label for="passwordRegistro">Contraseña:</label>
+                    <input type="password" id="passwordRegistro" placeholder="Contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar Usuario</button>
+            </form>
+            <p id="mensajeRegistro" class="mensaje"></p>
+        </section>
+
+        <!-- SECCIÓN 2: BUSCAR -->
+        <section class="card">
+            <h2>2. Buscar Paciente</h2>
+            <div class="form-group">
+                <label for="correoBuscar">Correo electrónico a consultar:</label>
+                <input type="email" id="correoBuscar" placeholder="correo@ejemplo.com">
+            </div>
+            <button id="btnBuscar" class="btn btn-secondary">Buscar Paciente</button>
+            <div id="resultadoBusqueda" class="resultado"></div>
+        </section>
+
+        <!-- SECCIÓN 3: EDITAR -->
+        <section class="card">
+            <h2>3. Editar / Actualizar Paciente</h2>
+            <div class="form-group">
+                <label for="correoEditarConsulta">Correo del paciente a modificar:</label>
+                <input type="email" id="correoEditarConsulta" placeholder="correo@ejemplo.com">
+            </div>
+            <button id="btnCargarDatos" class="btn btn-accent">Cargar Datos</button>
+
+            <div id="seccionFormEditar" class="hidden">
+                <div class="form-group">
+                    <label for="nombreEditar">Nuevo Nombre:</label>
+                    <input type="text" id="nombreEditar">
+                </div>
+                <div class="form-group">
+                    <label for="passwordEditar">Nueva Contraseña:</label>
+                    <input type="password" id="passwordEditar">
+                </div>
+                <button id="btnActualizar" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+            <p id="mensajeEditar" class="mensaje"></p>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
